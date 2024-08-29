@@ -1,8 +1,6 @@
 package domain;
 
-import com.gitee.sunchenbin.mybatis.actable.annotation.IsAutoIncrement;
-import com.gitee.sunchenbin.mybatis.actable.annotation.IsKey;
-import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
+import com.gitee.sunchenbin.mybatis.actable.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -25,47 +23,65 @@ public class CloudLocalContrast implements Serializable {
     /**
      * 规则ID
      */
+    @Column
+    @ColumnComment("规则ID")
     private Long ruleId;
 
     /**
      * 氚云表名
      * */
+    @Column
+    @ColumnComment("氚云表名")
     private String chuanCloudTableName;
 
     /**
      * 氚云子表表名
      * */
+    @Column
+    @ColumnComment("氚云子表表名")
     private String chuanCloudChildCloudName;
 
     /**
      * 本地字段名称
      */
+    @Column
+    @ColumnComment("本地字段名称")
     private String localFields;
 
     /**
      * 本地字段类型
      * */
+    @Column
+    @ColumnComment("本地字段类型")
     private String localFieldType;
 
     /**
      * 氚云字段名称
      */
+    @Column
+    @ColumnComment("氚云字段名称")
     private String cloudFields;
 
     /**
      * 字段类型
      * */
+    @Column
+    @ColumnComment("字段类型")
     private String fieldType;
 
     /**
      * 字段备注
      * */
+    @Column
+    @ColumnComment("字段备注")
     private String remark;
 
 
     /**
      * 字段对应类型，1-主表对应，2-字表对应
      * */
+    @Column
+    @ColumnComment("字段对应类型，1-主表对应，2-字表对应")
     private int type;
 
 
